@@ -1,12 +1,13 @@
-let nameCount=8000000000;
-const body=document.getElementById('B')
+const body = document.getElementById("B");
 
 
-body.addEventListener("click",()=>{
-    console.log(nameCount);
-    
-   nameCount--;
-   console.log(nameCount);
-   
-    document.getElementById('counter').innerHTML=nameCount
-})
+body.addEventListener("click", () => {
+    let count = parseInt(localStorage.getItem("counter"))||800000000;
+    count--;
+    localStorage.setItem("counter", count);
+    document.getElementById("counter").innerHTML = count;
+    console.log(count);
+});
+
+
+localStorage.clear();
