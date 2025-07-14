@@ -10,4 +10,4 @@ body.addEventListener("click", () => {
 });
 
 
-localStorage.clear();
+// localStorage.clear();
